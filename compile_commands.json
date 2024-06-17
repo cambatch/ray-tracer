@@ -1,0 +1,194 @@
+[
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -DGLFW_INCLUDE_NONE -IE:/Dev/Graphics/ray-tracer/dep/glm-light -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -IE:/Dev/Graphics/ray-tracer/dep/glad/include -IE:/Dev/Graphics/ray-tracer/dep/imgui -IE:/Dev/Graphics/ray-tracer/dep/imgui/backends -IE:/Dev/Graphics/ray-tracer -IE:/Dev/Graphics/ray-tracer/dep/stb -O3 -DNDEBUG -std=gnu++20 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -o CMakeFiles\\ray-tracer.dir\\src\\main.cpp.obj -c E:\\Dev\\Graphics\\ray-tracer\\src\\main.cpp",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\src\\main.cpp",
+  "output": "CMakeFiles\\ray-tracer.dir\\src\\main.cpp.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -DGLFW_INCLUDE_NONE -IE:/Dev/Graphics/ray-tracer/dep/glm-light -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -IE:/Dev/Graphics/ray-tracer/dep/glad/include -IE:/Dev/Graphics/ray-tracer/dep/imgui -IE:/Dev/Graphics/ray-tracer/dep/imgui/backends -IE:/Dev/Graphics/ray-tracer -IE:/Dev/Graphics/ray-tracer/dep/stb -O3 -DNDEBUG -std=gnu++20 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -o CMakeFiles\\ray-tracer.dir\\src\\glDraw.cpp.obj -c E:\\Dev\\Graphics\\ray-tracer\\src\\glDraw.cpp",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\src\\glDraw.cpp",
+  "output": "CMakeFiles\\ray-tracer.dir\\src\\glDraw.cpp.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/src -IE:/Dev/Graphics/ray-tracer/bin/Release/dep/glfw-3.4/src -O3 -DNDEBUG -std=c99 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -Wall -o dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\context.c.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\context.c",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\context.c",
+  "output": "dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\context.c.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/src -IE:/Dev/Graphics/ray-tracer/bin/Release/dep/glfw-3.4/src -O3 -DNDEBUG -std=c99 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -Wall -o dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\init.c.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\init.c",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\init.c",
+  "output": "dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\init.c.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/src -IE:/Dev/Graphics/ray-tracer/bin/Release/dep/glfw-3.4/src -O3 -DNDEBUG -std=c99 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -Wall -o dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\input.c.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\input.c",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\input.c",
+  "output": "dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\input.c.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/src -IE:/Dev/Graphics/ray-tracer/bin/Release/dep/glfw-3.4/src -O3 -DNDEBUG -std=c99 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -Wall -o dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\monitor.c.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\monitor.c",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\monitor.c",
+  "output": "dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\monitor.c.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/src -IE:/Dev/Graphics/ray-tracer/bin/Release/dep/glfw-3.4/src -O3 -DNDEBUG -std=c99 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -Wall -o dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\platform.c.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\platform.c",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\platform.c",
+  "output": "dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\platform.c.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/src -IE:/Dev/Graphics/ray-tracer/bin/Release/dep/glfw-3.4/src -O3 -DNDEBUG -std=c99 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -Wall -o dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\vulkan.c.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\vulkan.c",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\vulkan.c",
+  "output": "dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\vulkan.c.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/src -IE:/Dev/Graphics/ray-tracer/bin/Release/dep/glfw-3.4/src -O3 -DNDEBUG -std=c99 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -Wall -o dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\window.c.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\window.c",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\window.c",
+  "output": "dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\window.c.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/src -IE:/Dev/Graphics/ray-tracer/bin/Release/dep/glfw-3.4/src -O3 -DNDEBUG -std=c99 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -Wall -o dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\egl_context.c.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\egl_context.c",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\egl_context.c",
+  "output": "dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\egl_context.c.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/src -IE:/Dev/Graphics/ray-tracer/bin/Release/dep/glfw-3.4/src -O3 -DNDEBUG -std=c99 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -Wall -o dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\osmesa_context.c.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\osmesa_context.c",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\osmesa_context.c",
+  "output": "dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\osmesa_context.c.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/src -IE:/Dev/Graphics/ray-tracer/bin/Release/dep/glfw-3.4/src -O3 -DNDEBUG -std=c99 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -Wall -o dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\null_init.c.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\null_init.c",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\null_init.c",
+  "output": "dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\null_init.c.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/src -IE:/Dev/Graphics/ray-tracer/bin/Release/dep/glfw-3.4/src -O3 -DNDEBUG -std=c99 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -Wall -o dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\null_monitor.c.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\null_monitor.c",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\null_monitor.c",
+  "output": "dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\null_monitor.c.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/src -IE:/Dev/Graphics/ray-tracer/bin/Release/dep/glfw-3.4/src -O3 -DNDEBUG -std=c99 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -Wall -o dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\null_window.c.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\null_window.c",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\null_window.c",
+  "output": "dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\null_window.c.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/src -IE:/Dev/Graphics/ray-tracer/bin/Release/dep/glfw-3.4/src -O3 -DNDEBUG -std=c99 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -Wall -o dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\null_joystick.c.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\null_joystick.c",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\null_joystick.c",
+  "output": "dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\null_joystick.c.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/src -IE:/Dev/Graphics/ray-tracer/bin/Release/dep/glfw-3.4/src -O3 -DNDEBUG -std=c99 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -Wall -o dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\win32_module.c.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\win32_module.c",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\win32_module.c",
+  "output": "dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\win32_module.c.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/src -IE:/Dev/Graphics/ray-tracer/bin/Release/dep/glfw-3.4/src -O3 -DNDEBUG -std=c99 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -Wall -o dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\win32_time.c.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\win32_time.c",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\win32_time.c",
+  "output": "dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\win32_time.c.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/src -IE:/Dev/Graphics/ray-tracer/bin/Release/dep/glfw-3.4/src -O3 -DNDEBUG -std=c99 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -Wall -o dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\win32_thread.c.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\win32_thread.c",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\win32_thread.c",
+  "output": "dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\win32_thread.c.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/src -IE:/Dev/Graphics/ray-tracer/bin/Release/dep/glfw-3.4/src -O3 -DNDEBUG -std=c99 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -Wall -o dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\win32_init.c.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\win32_init.c",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\win32_init.c",
+  "output": "dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\win32_init.c.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/src -IE:/Dev/Graphics/ray-tracer/bin/Release/dep/glfw-3.4/src -O3 -DNDEBUG -std=c99 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -Wall -o dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\win32_joystick.c.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\win32_joystick.c",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\win32_joystick.c",
+  "output": "dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\win32_joystick.c.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/src -IE:/Dev/Graphics/ray-tracer/bin/Release/dep/glfw-3.4/src -O3 -DNDEBUG -std=c99 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -Wall -o dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\win32_monitor.c.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\win32_monitor.c",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\win32_monitor.c",
+  "output": "dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\win32_monitor.c.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/src -IE:/Dev/Graphics/ray-tracer/bin/Release/dep/glfw-3.4/src -O3 -DNDEBUG -std=c99 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -Wall -o dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\win32_window.c.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\win32_window.c",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\win32_window.c",
+  "output": "dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\win32_window.c.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/src -IE:/Dev/Graphics/ray-tracer/bin/Release/dep/glfw-3.4/src -O3 -DNDEBUG -std=c99 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -Wall -o dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\wgl_context.c.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\wgl_context.c",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\glfw-3.4\\src\\wgl_context.c",
+  "output": "dep\\glfw-3.4\\src\\CMakeFiles\\glfw.dir\\wgl_context.c.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -IE:/Dev/Graphics/ray-tracer/dep/glad/include -O3 -DNDEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -o dep\\glad\\CMakeFiles\\glad.dir\\src\\gl.c.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\glad\\src\\gl.c",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\glad\\src\\gl.c",
+  "output": "dep\\glad\\CMakeFiles\\glad.dir\\src\\gl.c.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IE:/Dev/Graphics/ray-tracer/dep/imgui -IE:/Dev/Graphics/ray-tracer/dep/imgui/backends -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -O3 -DNDEBUG -std=gnu++20 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -o dep\\imgui\\CMakeFiles\\imgui.dir\\imgui.cpp.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\imgui\\imgui.cpp",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\imgui\\imgui.cpp",
+  "output": "dep\\imgui\\CMakeFiles\\imgui.dir\\imgui.cpp.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IE:/Dev/Graphics/ray-tracer/dep/imgui -IE:/Dev/Graphics/ray-tracer/dep/imgui/backends -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -O3 -DNDEBUG -std=gnu++20 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -o dep\\imgui\\CMakeFiles\\imgui.dir\\imgui_demo.cpp.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\imgui\\imgui_demo.cpp",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\imgui\\imgui_demo.cpp",
+  "output": "dep\\imgui\\CMakeFiles\\imgui.dir\\imgui_demo.cpp.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IE:/Dev/Graphics/ray-tracer/dep/imgui -IE:/Dev/Graphics/ray-tracer/dep/imgui/backends -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -O3 -DNDEBUG -std=gnu++20 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -o dep\\imgui\\CMakeFiles\\imgui.dir\\imgui_draw.cpp.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\imgui\\imgui_draw.cpp",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\imgui\\imgui_draw.cpp",
+  "output": "dep\\imgui\\CMakeFiles\\imgui.dir\\imgui_draw.cpp.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IE:/Dev/Graphics/ray-tracer/dep/imgui -IE:/Dev/Graphics/ray-tracer/dep/imgui/backends -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -O3 -DNDEBUG -std=gnu++20 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -o dep\\imgui\\CMakeFiles\\imgui.dir\\imgui_tables.cpp.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\imgui\\imgui_tables.cpp",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\imgui\\imgui_tables.cpp",
+  "output": "dep\\imgui\\CMakeFiles\\imgui.dir\\imgui_tables.cpp.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IE:/Dev/Graphics/ray-tracer/dep/imgui -IE:/Dev/Graphics/ray-tracer/dep/imgui/backends -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -O3 -DNDEBUG -std=gnu++20 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -o dep\\imgui\\CMakeFiles\\imgui.dir\\imgui_widgets.cpp.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\imgui\\imgui_widgets.cpp",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\imgui\\imgui_widgets.cpp",
+  "output": "dep\\imgui\\CMakeFiles\\imgui.dir\\imgui_widgets.cpp.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IE:/Dev/Graphics/ray-tracer/dep/imgui -IE:/Dev/Graphics/ray-tracer/dep/imgui/backends -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -O3 -DNDEBUG -std=gnu++20 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -o dep\\imgui\\CMakeFiles\\imgui.dir\\backends\\imgui_impl_glfw.cpp.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\imgui\\backends\\imgui_impl_glfw.cpp",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\imgui\\backends\\imgui_impl_glfw.cpp",
+  "output": "dep\\imgui\\CMakeFiles\\imgui.dir\\backends\\imgui_impl_glfw.cpp.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IE:/Dev/Graphics/ray-tracer/dep/imgui -IE:/Dev/Graphics/ray-tracer/dep/imgui/backends -IE:/Dev/Graphics/ray-tracer/dep/glfw-3.4/include -O3 -DNDEBUG -std=gnu++20 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -o dep\\imgui\\CMakeFiles\\imgui.dir\\backends\\imgui_impl_opengl3.cpp.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\imgui\\backends\\imgui_impl_opengl3.cpp",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\imgui\\backends\\imgui_impl_opengl3.cpp",
+  "output": "dep\\imgui\\CMakeFiles\\imgui.dir\\backends\\imgui_impl_opengl3.cpp.obj"
+},
+{
+  "directory": "E:/Dev/Graphics/ray-tracer/bin/Release",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\clang.exe -IE:/Dev/Graphics/ray-tracer/dep/stb -O3 -DNDEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -o dep\\stb\\CMakeFiles\\stb.dir\\stb.c.obj -c E:\\Dev\\Graphics\\ray-tracer\\dep\\stb\\stb.c",
+  "file": "E:\\Dev\\Graphics\\ray-tracer\\dep\\stb\\stb.c",
+  "output": "dep\\stb\\CMakeFiles\\stb.dir\\stb.c.obj"
+}
+]

@@ -12,9 +12,24 @@ struct Color {
     uint8_t b;
 };
 
+
+inline float LinearToGamma(float linearComp) {
+    if (linearComp > 0) {
+        return std::sqrtf(linearComp);
+    } else {
+        return 0;
+    }
+}
+
 inline Color ConvertColorToInt(const Colorf& c) {
-    int r = 255.999 * c.x;
-    int g = 255.999 * c.y;
-    int b = 255.999 * c.z;
+    // Convert to gamma space
+    float gr = LinearToGamma(c.x);
+    float gg = LinearToGamma(c.y);
+    float gb = LinearToGamma(c.z);
+
+    int r = 255.999 * gr;
+    int g = 255.999 * gg;
+    int b = 255.999 * gb;
     return Color(r, g, b);
 }
+

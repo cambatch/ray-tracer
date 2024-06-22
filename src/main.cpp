@@ -1,19 +1,12 @@
-#include <vector>
-#include <iostream>
 #include <cstring>
 
 #include <glm/glm.hpp>
-#include <glad/gl.h>
 #include <stb_image_write.h>
 
-#include "glDraw.hpp"
-#include "color.hpp"
-#include "objects.hpp"
+#include "world.hpp"
 #include "camera.hpp"
-#include "material.hpp"
-#include "hitRecord.hpp"
 #include "utils.hpp"
-#include "timer.hpp"
+#include "renderer.hpp"
 
 
 void FlipBufferVertical(std::vector<uint8_t>& buffer, uint32_t width, uint32_t height) {
@@ -30,59 +23,20 @@ void FlipBufferVertical(std::vector<uint8_t>& buffer, uint32_t width, uint32_t h
     }
 }
 
-
-Colorf TraceRay(const Ray& ray, World& world, int32_t depth) {
-    if (depth <= 0) return Colorf(0, 0, 0);
-
-    // Spheres
-    HitRecord record;
-
-    // Find closest sphere
-    int32_t closestSphere = HitSphere(ray, 0.001f, INF, record, world.Spheres);
-
-    // Handle Material if available
-    if (closestSphere != -1) {
-        Ray scattered;
-        Colorf attenuation;
-
-        const auto& s = world.Spheres[closestSphere];
-        const auto& m = world.Materials[s.MatIndex];
-
-        switch (m.Type) {
-            case MaterialType::LAMBERTIAN: {
-                m.LambertianScatter(ray, record, attenuation, scattered);
-                break;
-            }
-            case MaterialType::METAL: {
-                m.MetalScatter(ray, record, attenuation, scattered);
-                break;
-            }
-            case MaterialType::DIELECTRIC: {
-                    m.DielectricScatter(ray, record, attenuation, scattered);
-                    break;
-            }
-        }
-
-        return attenuation * TraceRay(scattered, world, depth - 1);
-    } else {
-        glm::vec3 unitDir = glm::normalize(ray.Direction);
-        float a = 0.5f * (unitDir.y + 1.0);
-        Colorf color = (1.0f - a) * Colorf(1.0f, 1.0f, 1.0f) + a * Colorf(0.5f, 0.7f, 1.0f);
-        return color;
-    }
-}
-
-
 int main(int argc, char** argv) {
     uint32_t width = 1920;
     uint32_t height = 1080;
-    std::vector<uint8_t> buffer(width * height * 3);
-    bool doneRendering = false;
-    int32_t y = 0;
-    int32_t x = 0;
     int32_t maxDepth = 10;
-
     World world;
+
+    float camFov = 20.0f;
+    glm::vec3 camPos = {13, 2, 3};
+    glm::vec3 camLookAt = {0, 0, 0};
+    glm::vec3 camUp = {0, 1, 0};
+    float camDefocusAngle = 0.6f;
+    float camDefocusDist = 10.0f;
+    int samplesPerPixel = 10;
+    float pixelSampleScale = 1.0 / samplesPerPixel;
 
     {
         // int32_t groundMat = world.AddLambertianMaterial({0.8f, 0.8f, 0.0f});
@@ -107,12 +61,6 @@ int main(int argc, char** argv) {
         // world.AddSphere({ R, 0.0f, -1.0f}, R, matRight);
     }
 
-    float camFov = 20.0f;
-    glm::vec3 camPos = {13, 2, 3};
-    glm::vec3 camLookAt = {0, 0, 0};
-    glm::vec3 camUp = {0, 1, 0};
-    float camDefocusAngle = 0.6f;
-    float camDefocusDist = 10.0f;
 
     // random spheres
     {
@@ -156,48 +104,10 @@ int main(int argc, char** argv) {
 
     Camera camera(camPos, camLookAt, camUp, camFov, width, height);
 
-    InitDrawing(width, height);
-
-    int samplesPerPixel = 10;
-    float pixelSampleScale = 1.0 / samplesPerPixel;
-
-    Timer timer;
-
-    while (!glfwWindowShouldClose(window)) {
-        if (!doneRendering) {
-            x = 0;
-            for (; x < width; ++x) {
-                Colorf colorf(0, 0, 0);
-
-                for (int i = 0; i < samplesPerPixel; ++i) {
-                    Ray ray = camera.GetRay(x, y);
-                    colorf += TraceRay(ray, world, maxDepth);
-                }
-
-                colorf *= pixelSampleScale;
-                Color color = ConvertColorToInt(colorf);
-
-                buffer[(y * width + x) * 3 + 0] = color.r;
-                buffer[(y * width + x) * 3 + 1] = color.g;
-                buffer[(y * width + x) * 3 + 2] = color.b;
-            }
-
-            UpdateTexture(0, y, width, 1, buffer.data());
-
-            ++y;
-            if (y == height) {
-                doneRendering = true;
-                std::cout << "Finished in " << timer.ElapsedSeconds() << " seconds\n";
-            }
-        }
-
-        Draw();
-    }
+    Renderer renderer(width, height,samplesPerPixel, maxDepth);
+    renderer.Render(camera, world);
 
     // Flip buffer to turn into image.
     // FlipBufferVertical(buffer, width, height);
     // stbi_write_png("assets/renders/test2.png", width, height, 3, buffer.data(), sizeof(uint8_t) * width * 3);
-
-    TerminateDrawing();
-    glfwTerminate();
 }

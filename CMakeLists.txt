@@ -23,6 +23,8 @@ add_subdirectory(dep/stb)
 set(SOURCES
     src/main.cpp
     src/glDraw.cpp
+    src/renderer.cpp
+    src/threadPool.cpp
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})

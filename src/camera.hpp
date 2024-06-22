@@ -74,7 +74,7 @@ struct Camera {
         DefocusDiskV = V * defocusRadius;
     }
 
-    Ray GetRay(uint32_t x, uint32_t y) {
+    Ray GetRay(uint32_t x, uint32_t y) const {
         glm::vec3 offset = SampleSquare();
         glm::vec3 pixelSample = Pixel100Loc + ((x + offset.x) * PixelDeltaU) + ((y + offset.y) * PixelDeltaV);
         glm::vec3 rayOrigin = (DefocusAngle <= 0) ? CamCenter  : DefocusDiskSample(CamCenter, DefocusDiskU, DefocusDiskV);

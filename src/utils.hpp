@@ -3,6 +3,7 @@
 #include <limits>
 #include <numbers>
 #include <random>
+#include <cstring>
 
 #include <glm/glm.hpp>
 #define GLM_ENABLE_EXPERIMENTAL
@@ -13,6 +14,20 @@ constexpr double PI = std::numbers::pi;
 constexpr double PI_2 = std::numbers::pi / 2;
 constexpr double INF = std::numeric_limits<double>::infinity();
 
+// Flip buffer containing opengl texture to support image formats.
+inline void FlipBufferVertical(std::vector<uint8_t>& buffer, uint32_t width, uint32_t height) {
+    uint32_t rowSize = width * 3;
+    std::vector<uint8_t> tempRow(rowSize);
+
+    for (uint32_t y = 0; y < height / 2; ++y) {
+        uint32_t topRow = y * rowSize;
+        uint32_t bottomRow = (height - y - 1) * rowSize;
+
+        std::memcpy(tempRow.data(), &buffer[topRow], rowSize);
+        std::memcpy(&buffer[topRow], &buffer[bottomRow], rowSize);
+        std::memcpy(&buffer[bottomRow], tempRow.data(), rowSize);
+    }
+}
 
 inline double RandomDouble() {
     static std::mt19937 gen(0);

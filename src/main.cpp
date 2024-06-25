@@ -1,5 +1,3 @@
-#include <cstring>
-
 #include <glm/glm.hpp>
 #include <stb_image_write.h>
 
@@ -9,35 +7,22 @@
 #include "renderer.hpp"
 
 
-void FlipBufferVertical(std::vector<uint8_t>& buffer, uint32_t width, uint32_t height) {
-    uint32_t rowSize = width * 3;
-    std::vector<uint8_t> tempRow(rowSize);
-
-    for (uint32_t y = 0; y < height / 2; ++y) {
-        uint32_t topRow = y * rowSize;
-        uint32_t bottomRow = (height - y - 1) * rowSize;
-
-        std::memcpy(tempRow.data(), &buffer[topRow], rowSize);
-        std::memcpy(&buffer[topRow], &buffer[bottomRow], rowSize);
-        std::memcpy(&buffer[bottomRow], tempRow.data(), rowSize);
-    }
-}
 
 int main(int argc, char** argv) {
     uint32_t width = 1920;
     uint32_t height = 1080;
-    int32_t maxDepth = 10;
-    World world;
+    int32_t maxDepth = 20;
 
     float camFov = 20.0f;
-    glm::vec3 camPos = {13, 2, 3};
-    glm::vec3 camLookAt = {0, 0, 0};
-    glm::vec3 camUp = {0, 1, 0};
-    float camDefocusAngle = 0.6f;
-    float camDefocusDist = 10.0f;
-    int samplesPerPixel = 10;
+    glm::vec3 camPos = { 13, 2, 3 };
+    glm::vec3 camLookAt = { 0, 0, 0 };
+    glm::vec3 camUp = { 0, 1, 0 };
+    float camDefocusAngle = 1.0f;
+    float camDefocusDist = 0.0f;
+    int samplesPerPixel = 100;
     float pixelSampleScale = 1.0 / samplesPerPixel;
 
+    World world;
     {
         // int32_t groundMat = world.AddLambertianMaterial({0.8f, 0.8f, 0.0f});
         // int32_t centerMat = world.AddLambertianMaterial({0.1f, 0.2f, 0.5f});
@@ -60,7 +45,6 @@ int main(int argc, char** argv) {
         // world.AddSphere({-R, 0.0f, -1.0f}, R, matLeft);
         // world.AddSphere({ R, 0.0f, -1.0f}, R, matRight);
     }
-
 
     // random spheres
     {
@@ -106,8 +90,4 @@ int main(int argc, char** argv) {
 
     Renderer renderer(width, height,samplesPerPixel, maxDepth);
     renderer.Render(camera, world);
-
-    // Flip buffer to turn into image.
-    // FlipBufferVertical(buffer, width, height);
-    // stbi_write_png("assets/renders/test2.png", width, height, 3, buffer.data(), sizeof(uint8_t) * width * 3);
 }

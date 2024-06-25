@@ -30,6 +30,33 @@ static std::vector<float> quadVertices = {
 static std::vector<uint32_t> quadIndices = { 0, 1, 2, 2, 1, 3 };
 
 
+static const char* vertexShaderSource = R"(
+#version 460 core
+
+layout(location = 0) in vec2 aPos;
+layout(location = 1) in vec2 aTexCoords;
+
+out vec2 TexCoords;
+
+void main() {
+    gl_Position = vec4(aPos, 0.0, 1.0);
+    TexCoords = aTexCoords;
+}
+)";
+
+static const char* fragmentShaderSource = R"(
+#version 460 core
+
+in vec2 TexCoords;
+out vec4 FragColor;
+
+uniform sampler2D uTexture;
+
+void main() {
+    FragColor = texture(uTexture, TexCoords);
+}
+)";
+
 static void InitGLFW(uint32_t width, uint32_t height) {
     if (!glfwInit()) {
         std::cerr << "Failed to initialize GLFW\n";
@@ -115,24 +142,19 @@ void InitDrawing(uint32_t width, uint32_t height) {
     glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 4, (void*)(sizeof(float) * 2));
     glEnableVertexAttribArray(1);
 
-
-    std::string vertSource = ReadShaderFile("assets/shaders/quad.vert");
-    std::string fragSource = ReadShaderFile("assets/shaders/quad.frag");
-    const char* vertSrc = vertSource.c_str();
-    const char* fragSrc = fragSource.c_str();
-
     uint32_t vertShader;
     uint32_t fragShader;
 
     vertShader = glCreateShader(GL_VERTEX_SHADER);
     fragShader = glCreateShader(GL_FRAGMENT_SHADER);
 
-    glShaderSource(vertShader, 1, &vertSrc, nullptr);
+    glShaderSource(vertShader, 1, &vertexShaderSource, nullptr);
     glCompileShader(vertShader);
     if (!ShaderCompileStatus(vertShader)) {
         exit(1);
     }
-    glShaderSource(fragShader, 1, &fragSrc, nullptr);
+
+    glShaderSource(fragShader, 1, &fragmentShaderSource, nullptr);
     glCompileShader(fragShader);
     if (!ShaderCompileStatus(fragShader)) {
         exit(1);

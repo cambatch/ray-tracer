@@ -41,11 +41,6 @@ void ThreadPool::Stop() {
     }
 }
 
-void ThreadPool::WaitForCompletion() {
-    std::unique_lock<std::mutex> lock(m_QueueMutex);
-    m_Condition.wait(lock, [this] { return m_Tasks.empty(); });
-}
-
 void ThreadPool::Work() {
     while (true) {
         std::function<void()> task;

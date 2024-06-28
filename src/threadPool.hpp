@@ -13,7 +13,6 @@ public:
     ~ThreadPool();
 
     void EnqueueTask(std::function<void()> task);
-    void WaitForCompletion();
 
     void Stop();
     bool Working() const { return !m_Stop; }

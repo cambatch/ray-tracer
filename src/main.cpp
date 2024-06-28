@@ -17,9 +17,9 @@ int main(int argc, char** argv) {
     glm::vec3 camPos = { 13, 2, 3 };
     glm::vec3 camLookAt = { 0, 0, 0 };
     glm::vec3 camUp = { 0, 1, 0 };
-    float camDefocusAngle = 1.0f;
-    float camDefocusDist = 0.0f;
-    int samplesPerPixel = 100;
+    float camDefocusAngle = 0.6f;
+    float camDefocusDist = 10.0f;
+    int samplesPerPixel = 10;
     float pixelSampleScale = 1.0 / samplesPerPixel;
 
     World world;

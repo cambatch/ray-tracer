@@ -21,6 +21,7 @@ Renderer::~Renderer() {
 }
 
 void Renderer::Render(const Camera& camera, const World& world) {
+
     std::atomic<int32_t> rowsRendered = 0;
     Timer timer;
 
@@ -35,24 +36,29 @@ void Renderer::Render(const Camera& camera, const World& world) {
     }
 
     while (!glfwWindowShouldClose(window)) {
-        if (!m_DoneRendering) {
-            std::unique_lock<std::mutex> lock(m_TaskMutex);
-            m_Condition.wait(lock, [=, this] {
-                if (m_RowsDone.empty()) return false;
-
-                int32_t yDone = m_RowsDone.front();
-                m_RowsDone.pop();
-
-                {
-                    std::unique_lock<std::mutex> lock(m_BufferMutex);
-                    UpdateTexture(0, yDone, m_Width, 1, m_ColorBuffer.data());
-                }
-
-                return true;
-            });
+     if (!m_DoneRendering) {
+        std::unique_lock<std::mutex> lock(m_TaskMutex);
+        m_Condition.wait(lock, [=, this] {
+        if (m_RowsDone.empty()) {
+          return false;
+        } else if (m_DoneRendering && m_RowsDone.empty()) {
+          m_ThreadPool.Stop();
+          return true;
         }
 
-        Draw();
+        int32_t yDone = m_RowsDone.front();
+        m_RowsDone.pop();
+
+        {
+          std::unique_lock<std::mutex> lock(m_BufferMutex);
+          UpdateTexture(0, yDone, m_Width, 1, m_ColorBuffer.data());
+        }
+
+        return true;
+        });
+     }
+
+     Draw();
     }
 }
 

@@ -1,4 +1,7 @@
 #include "threadPool.hpp"
+#include <thread>
+
+#include <iostream>
 
 
 ThreadPool::ThreadPool(size_t numThreads) {
@@ -10,8 +13,22 @@ ThreadPool::ThreadPool(size_t numThreads) {
 }
 
 ThreadPool::~ThreadPool() {
+    Stop();
+}
+
+void ThreadPool::EnqueueTask(std::function<void()> task) {
     {
         std::unique_lock<std::mutex> lock(m_QueueMutex);
+        m_Tasks.push(std::move(task));
+    }
+
+    m_Condition.notify_one();
+}
+
+void ThreadPool::Stop() {
+    {
+        std::unique_lock<std::mutex> lock(m_QueueMutex);
+        if (m_Stop) return;
         m_Stop = true;
     }
 
@@ -22,15 +39,6 @@ ThreadPool::~ThreadPool() {
             worker.join();
         }
     }
-}
-
-void ThreadPool::EnqueueTask(std::function<void()> task) {
-    {
-        std::unique_lock<std::mutex> lock(m_QueueMutex);
-        m_Tasks.push(std::move(task));
-    }
-
-    m_Condition.notify_one();
 }
 
 void ThreadPool::WaitForCompletion() {
@@ -46,14 +54,18 @@ void ThreadPool::Work() {
             std::unique_lock<std::mutex> lock(m_QueueMutex);
             m_Condition.wait(lock, [this] { return m_Stop || !m_Tasks.empty(); });
 
-            if (m_Stop && m_Tasks.empty()) {
-                return;
-            }
+            if (m_Stop) return;
 
-            task = std::move(m_Tasks.front());
-            m_Tasks.pop();
+            if (!m_Tasks.empty()) {
+                task = std::move(m_Tasks.front());
+                m_Tasks.pop();
+            }
         }
 
-        task();
+        if (task) {
+            task();
+        }
     }
+
+    std::cout << "Thread " << std::this_thread::get_id() << "Exiting Work()\n";
 }

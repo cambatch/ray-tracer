@@ -1,8 +1,6 @@
 #include "threadPool.hpp"
 #include <thread>
 
-#include <iostream>
-
 
 ThreadPool::ThreadPool(size_t numThreads) {
     m_Stop = false;
@@ -61,6 +59,4 @@ void ThreadPool::Work() {
             task();
         }
     }
-
-    std::cout << "Thread " << std::this_thread::get_id() << "Exiting Work()\n";
 }

@@ -31,4 +31,8 @@ struct World {
     void AddSphere(const glm::vec3& o, float r, int32_t matIndex) {
         Spheres.emplace_back(o, r, matIndex);
     }
+
+    void AddSphere(const glm::vec3& c, const glm::vec3& c2, float  r, int32_t matIndex) {
+        Spheres.emplace_back(c, c2, r, matIndex, true);
+    }
 };

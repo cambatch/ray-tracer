@@ -9,8 +9,8 @@
 
 
 int main(int argc, char** argv) {
-    uint32_t width = 1920;
-    uint32_t height = 1080;
+    uint32_t width = 1024;
+    uint32_t height = 768;
     int32_t maxDepth = 20;
 
     float camFov = 20.0f;
@@ -19,7 +19,7 @@ int main(int argc, char** argv) {
     glm::vec3 camUp = { 0, 1, 0 };
     float camDefocusAngle = 0.6f;
     float camDefocusDist = 10.0f;
-    int samplesPerPixel = 10;
+    int samplesPerPixel = 100;
     float pixelSampleScale = 1.0 / samplesPerPixel;
 
     World world;
@@ -62,7 +62,8 @@ int main(int argc, char** argv) {
                     if (chooseMat < 0.8f) {
                         glm::vec3 albedo = RandomVec3() * RandomVec3();
                         sphereMat = world.AddLambertianMaterial(albedo);
-                        world.AddSphere(center, 0.2f, sphereMat);
+                        glm::vec3 center2 = center + glm::vec3(0, RandomFloat(0, 0.5f), 0);
+                        world.AddSphere(center, center2, 0.2f, sphereMat);
                     } else if (chooseMat < 0.95f) {
                         glm::vec3 albedo = RandomVec3(0.5, 1);
                         float fuzz = RandomFloat(0, 0.5f);

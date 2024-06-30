@@ -79,6 +79,7 @@ struct Camera {
         glm::vec3 pixelSample = Pixel100Loc + ((x + offset.x) * PixelDeltaU) + ((y + offset.y) * PixelDeltaV);
         glm::vec3 rayOrigin = (DefocusAngle <= 0) ? CamCenter  : DefocusDiskSample(CamCenter, DefocusDiskU, DefocusDiskV);
         glm::vec3 rayDir = pixelSample - rayOrigin;
-        return { rayOrigin, rayDir };
+        float rayTime = RandomFloat();
+        return { rayOrigin, rayDir, rayTime };
     }
 };

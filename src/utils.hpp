@@ -30,13 +30,13 @@ inline void FlipBufferVertical(std::vector<uint8_t>& buffer, uint32_t width, uin
 }
 
 inline double RandomDouble() {
-    static std::mt19937 gen(0);
+    static std::mt19937 gen;
     static std::uniform_real_distribution<double> dist(0.0, 1.0);
     return dist(gen);
 }
 
 inline float RandomFloat() {
-    static std::mt19937 gen(0);
+    static std::mt19937 gen;
     static std::uniform_real_distribution<float> dist(0.0f, 1.0f);
     return dist(gen);
 }

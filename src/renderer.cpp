@@ -65,6 +65,8 @@ void Renderer::Render(const Camera& camera, const World& world) {
 void Renderer::RenderChunk(int32_t y, const Camera& camera, const World& world) {
     Colorf colorf = { 0, 0, 0 };
 
+    // std::vector<uint8_t> buf(m_Width * 3);
+
     for (int32_t x = 0; x < m_Width; ++x) {
         colorf = { 0, 0, 0 };
         for (int32_t sample = 0; sample < m_SamplesPerPixel; ++sample) {
@@ -75,6 +77,10 @@ void Renderer::RenderChunk(int32_t y, const Camera& camera, const World& world) 
         colorf *= m_PixelSampleScale;
         Color color = ConvertColorToInt(colorf);
 
+        // buf[x * 3 + 0] = color.r;
+        // buf[x * 3 + 1] = color.g;
+        // buf[x * 3 + 2] = color.b;
+
         {
             std::unique_lock<std::mutex> lock(m_BufferMutex);
             m_ColorBuffer[(y * m_Width + x) * 3 + 0] = color.r;
@@ -82,6 +88,12 @@ void Renderer::RenderChunk(int32_t y, const Camera& camera, const World& world) 
             m_ColorBuffer[(y * m_Width + x) * 3 + 2] = color.b;
         }
     }
+
+    // Cache and memcpy after chunk is done. ~1 second speedup
+    // {
+        // std::unique_lock<std::mutex> lock(m_BufferMutex);
+        // std::memcpy(&m_ColorBuffer[y * m_Width * 3], buf.data(), buf.size());
+    // }
 
     {
         std::unique_lock<std::mutex> lock(m_TaskMutex);

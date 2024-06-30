@@ -30,14 +30,14 @@ struct Material {
             scatterDir = record.Normal;
         }
 
-        scattered = Ray(record.Point, scatterDir);
+        scattered = Ray(record.Point, scatterDir, ray.Time);
         attenuation = Albedo;
     }
 
     void MetalScatter(const Ray& ray, const HitRecord& record, Colorf& attenuation, Ray& scattered) const {
         glm::vec3 reflected = glm::reflect(ray.Direction, record.Normal);
         reflected = glm::normalize(reflected) + (fuzz * RandomUnitVec3());
-        scattered = Ray(record.Point, reflected);
+        scattered = Ray(record.Point, reflected, ray.Time);
         attenuation = Albedo;
     }
 
@@ -59,6 +59,6 @@ struct Material {
             dir = glm::refract(unitDir, record.Normal, ri);
         }
 
-        scattered = Ray(record.Point, dir);
+        scattered = Ray(record.Point, dir, ray.Time);
     }
 };
